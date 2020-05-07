@@ -30,3 +30,10 @@ ion-menu-button {
 ion-content ion-toolbar {
   --background: transparent;
 }
+ion-avatar {
+  transform-style: preserve-3d;
+  transition: 2s;
+}
+ion-avatar:hover {
+  transform: rotateY(360deg);
+}

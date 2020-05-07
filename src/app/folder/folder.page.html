@@ -4,18 +4,116 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ folder }}</ion-title>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="danger">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="danger">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="danger">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-segment color="secondary">
+      <ion-segment-button value="all" checked>
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="myview">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label> Enter your name: </ion-label>
+    <ion-input type="text" name="name" #name></ion-input>
+    <ion-button (click)="presentModal()" color="tertiary">
+      Display Modal!
+    </ion-button>
+  </ion-item>
+
+  <ion-card (click)="presentActionSheet()" class="ion-image">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img
+          src="https://clipartstation.com/wp-content/uploads/2018/09/avatars-clipart-1.png"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h3>John Doe</h3>
+        <p>
+          Hello nice speaking to you today!! I will work on the assigned
+          high-priority task.
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentActionSheet()" class="ion-image">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlyqYZmqQ5nx9BfD5tIRWbqnl6yBd6K2atpwoQBtZaPCjX-pUp&usqp=CAU"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h3>Jean Piterson</h3>
+        <p>
+          Hello, Hope you are doing well. Could you schedule a call with the
+          Client and Architect to discuss how to proceed ahead with the task.
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentActionSheet()" class="ion-image">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScx7xjh9-PTTtwhdIPXAhqAQLTi0oRFc4g4sjvCCNeB4gdn6yY&usqp=CAU"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h3>Eric Hunt</h3>
+        <p>
+          Check out the DEAL of the day. Dont miss the oppturnity. Grab the
+          deals now. Check out out website: www.amazon.com.
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentActionSheet()" class="ion-image">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img
+          src="https://cdn.imgbin.com/5/23/15/imgbin-job-computer-icons-profession-avatar-F2aaUMSyjacaGr9A5CfQHRDx1.jpg"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h3>Sheena Kapoor</h3>
+        <p>
+          Good news! We have deployed the new changed into production. The
+          Customers and the Clients are enjoying the new version of release.
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-footer>
+    <ion-toolbar color="tertiary">
+      <ion-label> Receive notification on new emails</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

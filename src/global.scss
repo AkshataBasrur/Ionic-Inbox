@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,15 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-content {
+  //ion-page.folder {
+  --background: url("https://preppywallpapers.com/wp-content/uploads/2019/01/header2.jpg");
+}
+ion-segment {
+  color: secondary;
+}
+
+ion-item {
+  --background: linear-gradient(rgb(186, 215, 237), white);
+}
